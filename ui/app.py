@@ -21,7 +21,7 @@ st.set_page_config(
 )
 
 # Title
-st.title("🏭 Multi-Agent Supply Chain Control Tower")
+st.title(" Multi-Agent Supply Chain Control Tower")
 st.caption("LangGraph-based decision system with 5 specialized agents")
 
 st.markdown("---")
@@ -35,7 +35,7 @@ product_id = st.selectbox(
 )
 
 # Run button
-if st.button("🚀 Run Supply Chain Decision Cycle", type="primary", use_container_width=True):
+if st.button("Run Supply Chain Decision Cycle", type="primary", use_container_width=True):
     with st.spinner("Executing multi-agent workflow..."):
         try:
             result = run_one_cycle(product_id)
@@ -53,7 +53,7 @@ if st.session_state.get('executed'):
     result = st.session_state['result']
     
     # SECTION 1: Supply Chain State
-    st.header("📊 Supply Chain State (Database Snapshot)")
+    st.header("Supply Chain State (Database Snapshot)")
     
     snapshot = result.get('db_snapshot', {})
     
@@ -70,9 +70,9 @@ if st.session_state.get('executed'):
         st.write(f"**Reorder Point:** {inventory.get('reorder_point', 0)} units")
         
         if inventory.get('quantity', 0) < inventory.get('reorder_point', 0):
-            st.warning("⚠️ Below reorder point")
+            st.warning("Below reorder point")
         else:
-            st.success("✓ Stock adequate")
+            st.success("Stock adequate")
     
     with col2:
         st.subheader("Suppliers")
@@ -101,7 +101,7 @@ if st.session_state.get('executed'):
     st.markdown("---")
     
     # SECTION 2: Agent Reasoning
-    st.header("🤖 Agent Reasoning (Multi-Agent Analysis)")
+    st.header("Agent Reasoning (Multi-Agent Analysis)")
     
     agent_outputs = result.get('agent_outputs', {})
     
@@ -139,7 +139,7 @@ if st.session_state.get('executed'):
     st.markdown("---")
     
     # SECTION 3: Final Decision (Visually Distinct)
-    st.header("⚡ Final Decision (Coordinator Synthesis)")
+    st.header("Final Decision (Coordinator Synthesis)")
     
     final_decision = result.get('final_decision')
     
@@ -173,7 +173,7 @@ if st.session_state.get('executed'):
     st.markdown("---")
     
     # SECTION 4: Governance Status (Critical for Interviews)
-    st.header("🛡️ Governance & Safety")
+    st.header(" Governance & Safety")
     
     col1, col2, col3 = st.columns(3)
     
@@ -197,4 +197,4 @@ if st.session_state.get('executed'):
             st.warning(f"⚠ {exec_result.get('message')}")
 
 else:
-    st.info("👆 Select a product and click 'Run Supply Chain Decision Cycle' to begin")
+    st.info("Select a product and click 'Run Supply Chain Decision Cycle' to begin")
