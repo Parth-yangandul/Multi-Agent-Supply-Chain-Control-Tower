@@ -1,18 +1,18 @@
-## 🏭 Multi-Agent Supply Chain Control Tower
+## Multi-Agent Supply Chain Control Tower
 
-![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python)
-![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)
-![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-4B8BBE?style=for-the-badge)
-![Status](https://img.shields.io/badge/Status-Interview--Ready-brightgreen?style=for-the-badge)
-![License](https://img.shields.io/badge/License-Private-lightgrey?style=for-the-badge)
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=plastic&logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-ff4b4b?style=plastic&logo=streamlit&logoColor=white)
+![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-32CD32?style=plastic)
+![LangSmith](https://img.shields.io/badge/Monitoring-LangSmith-FFFF00?style=plastic)
 
-An interview-ready, LangGraph-powered **Supply Chain Control Tower** that uses multiple collaborating agents to monitor inventory, assess risk, and recommend (or execute) replenishment decisions — all surfaced through a clean Streamlit dashboard.
+A minimal, educational **Multi-Agent Supply Chain Control Tower** built with Python, LangGraph, SQLAlchemy, and SQLite.  
+The system focuses on **explainable decisions**, **simple architecture**, and a **thin UI for inspection**, not production use.
 
 This project is designed as a **thin, elegant UI** on top of a **well-structured multi-agent backend**, ideal for demos, interviews, and experimentation with agentic workflows in real-world operations.
 
 ---
 
-## ✨ Features
+## Features
 
 - **Multi-agent architecture** with distinct responsibilities:
   - **Demand Agent** – Classifies demand risk and explains its reasoning.
@@ -34,7 +34,7 @@ This project is designed as a **thin, elegant UI** on top of a **well-structured
 
 ---
 
-## 🧱 Project Structure
+## Project Structure
 
 At a high level:
 
@@ -57,7 +57,7 @@ At a high level:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone & set up environment
 
@@ -104,7 +104,7 @@ This will:
 
 ---
 
-## 📊 Running the Streamlit Control Tower UI
+## Running the Streamlit Control Tower UI
 
 From the project root:
 
@@ -118,7 +118,7 @@ Then open the browser tab Streamlit launches (typically `http://localhost:8501`)
 In the UI you can:
 
 - Select a **Product** from the dropdown.
-- Click **“🚀 Run Supply Chain Decision Cycle”**.
+- Click *** Run Supply Chain Decision Cycle”**.
 - Inspect:
   - **Supply Chain State** – inventory, suppliers, POs, shipments.
   - **Agent Reasoning** – collapsible sections for each agent’s output.
@@ -129,7 +129,7 @@ This makes it very clear *why* the system chose a certain action, not just *what
 
 ---
 
-## 🧠 Architecture & Flow
+## Architecture & Flow
 
 1. **Data Ingestion**
    - Reads the current snapshot from `supply_chain.db` (product, inventory, suppliers, POs, shipments).
@@ -150,7 +150,7 @@ All of this is assembled into a **LangGraph `StateGraph`** in `graph.py`, which 
 
 ---
 
-## 🧪 CLI / Backend-Only Usage
+## CLI / Backend-Only Usage
 
 If you prefer to run the decision system without the UI (e.g., for testing or demos in a terminal), you can use:
 
@@ -167,7 +167,7 @@ This will:
 
 ---
 
-## 🛡️ Governance & Safety Notes
+##  Governance & Safety Notes
 
 - The **decision gate** and **human approval node** model real-world governance:
   - High-risk decisions can require a human approver.
@@ -177,11 +177,10 @@ This will:
   - Whether **human approval was required**.
   - The **approval status** / human feedback.
 
-This makes the project a strong candidate for showcasing responsible AI and control in operational contexts.
 
 ---
 
-## 🧩 Technologies Used
+##  Technologies Used
 
 - **Python 3.12+**
 - **LangGraph** for graph-based multi-agent orchestration.
@@ -192,19 +191,7 @@ This makes the project a strong candidate for showcasing responsible AI and cont
 
 ---
 
-## 🙋‍♂️ How to Talk About This Project (Interviews / Demos)
-
-When presenting this project, you can highlight:
-
-- **Architecture**: Clear separation between UI (`ui/`) and multi-agent backend (`src/`).
-- **Agent responsibilities**: Each agent solves a focused problem and feeds into a coordinator.
-- **Observability**: The UI and CLI both surface not just outputs but intermediate reasoning and risk.
-- **Governance**: Built-in human-in-the-loop path through the decision gate.
-- **Extensibility**: Easy to add new nodes/agents, plug in different models, or connect to real systems instead of the demo SQLite DB.
-
----
-
-## 📌 Next Steps / Ideas
+##  Next Steps / Ideas
 
 - Plug into a real transactional system instead of the demo SQLite database.
 - Add more products, suppliers, and realistic lead-time / risk modeling.
