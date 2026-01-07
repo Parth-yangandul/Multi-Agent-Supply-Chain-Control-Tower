@@ -1,0 +1,8 @@
+.env
+.cursor/
+venv/
+__pycache__/
+project_structure.txt
+src/__pycache__/
+data/
+env
