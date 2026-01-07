@@ -57,6 +57,12 @@ At a high level:
 
 ---
 
+## Architecture Overview
+
+<p align="center">
+  <img src="ui/arch_diagram.png" alt="Multi-Agent Supply Chain Control Tower Architecture" width="800"/>
+</p>
+
 ## Getting Started
 
 ### 1. Clone & set up environment
