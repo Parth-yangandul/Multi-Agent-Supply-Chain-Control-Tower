@@ -180,7 +180,7 @@ DEMO_SCENARIOS = {
 }
 
 # App title
-st.title("🏭 Multi-Agent Supply Chain Control Tower")
+st.title("Multi-Agent Supply Chain Control Tower")
 st.caption("Demo: Pre-captured Decision Scenarios")
 
 st.markdown("""
@@ -202,13 +202,13 @@ scenario = DEMO_SCENARIOS[scenario_choice]
 st.info(f"**Scenario:** {scenario['description']}")
 
 # Display button (cosmetic - data is pre-loaded)
-if st.button("🚀 View Decision Analysis", type="primary", use_container_width=True):
+if st.button("View Decision Analysis", type="primary", use_container_width=True):
     st.success("✓ Scenario loaded (pre-captured data)")
 
 st.markdown("---")
 
 # SECTION 1: Supply Chain State
-st.header("📊 Supply Chain State (Database Snapshot)")
+st.header(" Supply Chain State (Database Snapshot)")
 
 snapshot = scenario["db_snapshot"]
 
@@ -255,7 +255,7 @@ else:
 st.markdown("---")
 
 # SECTION 2: Agent Reasoning
-st.header("🤖 Agent Reasoning (Multi-Agent Analysis)")
+st.header(" Agent Reasoning (Multi-Agent Analysis)")
 
 agent_outputs = scenario["agent_outputs"]
 
@@ -297,7 +297,7 @@ with st.expander("**4. Logistics Agent** - Shipping Decision", expanded=True):
 st.markdown("---")
 
 # SECTION 3: Final Decision
-st.header("⚡ Final Decision (Coordinator Synthesis)")
+st.header(" Final Decision (Coordinator Synthesis)")
 
 final_decision = scenario["final_decision"]
 decision_type = final_decision["decision_type"]
@@ -327,7 +327,7 @@ st.text_area(
 st.markdown("---")
 
 # SECTION 4: Governance
-st.header("🛡️ Governance & Safety")
+st.header(" Governance & Safety")
 
 col1, col2, col3 = st.columns(3)
 
