@@ -1,5 +1,11 @@
 ## 🏭 Multi-Agent Supply Chain Control Tower
 
+![Python](https://img.shields.io/badge/Python-3.12%2B-blue?style=for-the-badge&logo=python)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-ff4b4b?style=for-the-badge&logo=streamlit&logoColor=white)
+![LangGraph](https://img.shields.io/badge/Orchestration-LangGraph-4B8BBE?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Interview--Ready-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-Private-lightgrey?style=for-the-badge)
+
 An interview-ready, LangGraph-powered **Supply Chain Control Tower** that uses multiple collaborating agents to monitor inventory, assess risk, and recommend (or execute) replenishment decisions — all surfaced through a clean Streamlit dashboard.
 
 This project is designed as a **thin, elegant UI** on top of a **well-structured multi-agent backend**, ideal for demos, interviews, and experimentation with agentic workflows in real-world operations.
